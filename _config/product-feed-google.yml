@@ -1,0 +1,17 @@
+---
+Name: silvershop-product-feed-google
+After:
+  - silvershop-product-feed
+---
+# Register the Google Merchant channel into the product-feed core's registry and enable it (installing this
+# connector means you want the Google feed). The core stays Google-agnostic — this is the whole integration.
+SilverShop\ProductFeed\Registry\ChannelFeedRegistry:
+  channels:
+    google: 'SilverShop\ProductFeed\Google\GoogleChannelFeed'
+  enabled_channels:
+    - google
+
+# Per-category Google-taxonomy mapping + parent-chain resolution.
+SilverShop\Page\ProductCategory:
+  extensions:
+    - SilverShop\ProductFeed\Google\Extension\ProductCategoryGoogleExtension

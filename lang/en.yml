@@ -1,0 +1,8 @@
+en:
+  SilverShop\ProductFeed\Google\Extension\ProductCategoryGoogleExtension:
+    GoogleFeedHeader: 'Google Shopping'
+    GoogleCategory: 'Google product category'
+    GoogleCategoryDesc: 'Used for the Google Shopping feed. Sub-categories inherit this unless they set their own.'
+  SilverShop\ProductFeed\Google\Model\GoogleShoppingCategory:
+    SINGULARNAME: 'Google product category'
+    PLURALNAME: 'Google product categories'
