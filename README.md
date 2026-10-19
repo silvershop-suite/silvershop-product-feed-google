@@ -3,7 +3,7 @@
 [![CI](https://github.com/silvershop/silvershop-product-feed-google/actions/workflows/ci.yml/badge.svg)](https://github.com/silvershop/silvershop-product-feed-google/actions/workflows/ci.yml)
 
 The **Google Merchant channel connector** for
-[`silvershop/product-feed`](https://github.com/silvershop/silvershop-product-feed) on Silverstripe CMS 6. It plugs a
+[`silvershop-suite/product-feed`](https://github.com/silvershop/silvershop-product-feed) on Silverstripe CMS 6. It plugs a
 Google Shopping channel into the feed core's registry seam: an **RSS 2.0 + `g:` namespace** serializer, the
 `CatalogProductData` → `g:*` field map, and a bundled **Google product taxonomy** with per-category mapping. No core
 change — the connector registers itself.
@@ -16,17 +16,17 @@ product-feed core ──(registry)──▶ GoogleChannelFeed.mapItem() ──�
 ## Requirements
 
 - PHP 8.3+, `silverstripe/framework` ^6, `silverstripe/cms` ^6, `silvershop/core` ^6.2
-- `silvershop/product-feed` (the feed core; pulls in `silvershop/catalog-data` transitively)
+- `silvershop-suite/product-feed` (the feed core; pulls in `silvershop-suite/catalog-data` transitively)
 
-> **Release ordering.** `silvershop/product-feed` and `silvershop/catalog-data` are not on Packagist yet, so CI / a
+> **Release ordering.** `silvershop-suite/product-feed` and `silvershop-suite/catalog-data` are not on Packagist yet, so CI / a
 > plain `composer require` is **release-blocked until they are published** — a known ordering dependency (core →
-> connector), like `silvershop/newsletter` → its ESP connectors. For development and the clean-room, install
+> connector), like `silvershop-suite/newsletter` → its ESP connectors. For development and the clean-room, install
 > product-feed + catalog-data (and its guarded soft-deps) as **path repositories**.
 
 ## Installation
 
 ```bash
-composer require silvershop/product-feed-google
+composer require silvershop-suite/product-feed-google
 ```
 
 Then `dev/build?flush=all`. This:
@@ -61,7 +61,7 @@ The feed core owns generation, scheduling and serving (see its README). With thi
 | `g:image_link` / `g:additional_image_link` | `imageLink()` / `additionalImageLinks()` |
 | `g:availability` | `availability()` → `in_stock` / `out_of_stock` / `preorder` / `backorder` |
 | `g:price` / `g:sale_price` | `formattedPrice()` / `formattedSalePrice()` (`"12.95 EUR"`) |
-| `g:brand` / `g:gtin` / `g:mpn` | `brand()` / `gtin()` / `mpn()` (gtin/mpn via `silvershop/product-identity`) |
+| `g:brand` / `g:gtin` / `g:mpn` | `brand()` / `gtin()` / `mpn()` (gtin/mpn via `silvershop-suite/product-identity`) |
 | `g:identifier_exists` | `no` only when no gtin + mpn + brand, else omitted |
 | `g:condition` | `condition()` → `new` / `refurbished` / `used` |
 | `g:google_product_category` | the mapped `GoogleShoppingCategory` (id, or path) via the category parent-walk |

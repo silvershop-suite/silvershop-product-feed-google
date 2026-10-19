@@ -1,6 +1,6 @@
 {
-    "name": "silvershop/product-feed-google",
-    "description": "Google Merchant channel connector for silvershop/product-feed (CMS 6): an RSS 2.0 + g: namespace serializer and field map that turns the shared CatalogProductData into a Google Shopping product feed, plus a bundled Google product taxonomy with per-category mapping. Registers itself into the product-feed core's channel registry — no core change.",
+    "name": "silvershop-suite/product-feed-google",
+    "description": "Google Merchant channel connector for silvershop-suite/product-feed (CMS 6): an RSS 2.0 + g: namespace serializer and field map that turns the shared CatalogProductData into a Google Shopping product feed, plus a bundled Google product taxonomy with per-category mapping. Registers itself into the product-feed core's channel registry — no core change.",
     "type": "silverstripe-vendormodule",
     "keywords": ["silverstripe", "silvershop", "ecommerce", "product-feed", "google-shopping", "google-merchant", "rss", "merchant-center"],
     "license": "BSD-3-Clause",
@@ -19,7 +19,7 @@
         "silverstripe/framework": "^6.0",
         "silverstripe/cms": "^6.0",
         "silvershop/core": "^6.2",
-        "silvershop/product-feed": "dev-main"
+        "silvershop-suite/product-feed": "dev-main"
     },
     "require-dev": {
         "cambis/silverstan": "^2.1",
