@@ -19,8 +19,18 @@
         "silverstripe/framework": "^6.0",
         "silverstripe/cms": "^6.0",
         "silvershop/core": "^6.2",
-        "silvershop-suite/product-feed": "dev-main"
+        "silvershop-suite/product-feed": "^1.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/silvershop-suite/silvershop-product-feed.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/silvershop-suite/silvershop-catalog-data.git"
+        }
+    ],
     "require-dev": {
         "cambis/silverstan": "^2.1",
         "silverstripe/recipe-testing": "^4",
