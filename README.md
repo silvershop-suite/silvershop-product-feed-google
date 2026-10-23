@@ -1,9 +1,9 @@
 # SilverShop Product Feed — Google
 
-[![CI](https://github.com/silvershop/silvershop-product-feed-google/actions/workflows/ci.yml/badge.svg)](https://github.com/silvershop/silvershop-product-feed-google/actions/workflows/ci.yml)
+[![CI](https://github.com/silvershop-suite/silvershop-product-feed-google/actions/workflows/ci.yml/badge.svg)](https://github.com/silvershop-suite/silvershop-product-feed-google/actions/workflows/ci.yml)
 
 The **Google Merchant channel connector** for
-[`silvershop-suite/product-feed`](https://github.com/silvershop/silvershop-product-feed) on Silverstripe CMS 6. It plugs a
+[`silvershop-suite/product-feed`](https://github.com/silvershop-suite/silvershop-product-feed) on Silverstripe CMS 6. It plugs a
 Google Shopping channel into the feed core's registry seam: an **RSS 2.0 + `g:` namespace** serializer, the
 `CatalogProductData` → `g:*` field map, and a bundled **Google product taxonomy** with per-category mapping. No core
 change — the connector registers itself.
